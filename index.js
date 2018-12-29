@@ -18,23 +18,23 @@ app.use(express.static(path.join(__dirname , 'public')));
 
 app.get('/', (req,res)=>{
     res.render('index');
-    console.log('poo');
+ 
     });
 
 app.get('/index', (req,res)=>{
     res.render('index');
-    console.log('poo');
+  
 
 });
 
 app.get('/about', (req,res)=>{
     res.render('about');
-    console.log('wee');
+  
     });
 
     app.get('*', (req,res)=>{
         res.render('error');
-        console.log('fuck');
+       
         });
     
 
