@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
     <title>My EJS TEST</title>
-</head>
-                   
+</head>         
 
  <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
  <div class="container-fluid">
@@ -30,20 +29,20 @@
         <a class="nav-link" href="about">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">Service</a>
+                  <a class="nav-link" href="service">Service</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">Team</a>
+                  <a class="nav-link" href="team">Team</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">conect</a>
+                  <a class="nav-link" href="conect">conect</a>
               </li>
           </ul>
    
         </div>
         </div>
         </nav>
-        <h1>Poo</h1>
+
         <div >
             <%- body %>
         </div>
@@ -51,14 +50,17 @@
 
 
  
-<footer>
-    
-        <p id='copyright'>Copyright &copy;  Albion Software
-          rights reserved.</p>
-     
-
+<footer id='myFooter'>
 </footer>
 
+
+<script>
+document.getElementById("myFooter").innerHTML =
+`<blockquote class="blockquote text-center">
+    <p id='copyright'>Copyright &copy; ${  new Date().getFullYear()} Albion Software
+      rights reserved.</p>
+    </blockquote>`;
+</script>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/popper.js/dist/popper.js"></script>
