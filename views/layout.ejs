@@ -29,13 +29,13 @@
         <a class="nav-link" href="about">About</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">Service</a>
+                  <a class="nav-link" href="service">Service</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">Team</a>
+                  <a class="nav-link" href="team">Team</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="about">conect</a>
+                  <a class="nav-link" href="conect">conect</a>
               </li>
           </ul>
    
@@ -50,16 +50,17 @@
 
 
  
-<footer>
-    
-        <p>Copyright &copy; Albion Software
-          rights reserved.</p>
-     
-
+<footer id='myFooter'>
 </footer>
 
 
-
+<script>
+document.getElementById("myFooter").innerHTML =
+`<blockquote class="blockquote text-center">
+    <p id='copyright'>Copyright &copy; ${  new Date().getFullYear()} Albion Software
+      rights reserved.</p>
+    </blockquote>`;
+</script>
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/popper.js/dist/popper.js"></script>
