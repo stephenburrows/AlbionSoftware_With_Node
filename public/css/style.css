@@ -1,17 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+Poppins
+.carousel-inner > .carousel-item > img {
+  margin: 0;   
+  max-width: 100%; }
 
 
-carousel-inner>.item>img {
-  margin: 0 auto;
-}
-
-
-.footer
-{
-  text-align: center;
-  color:black;
-  
-}
 
 
 /*---Media Queries --*/
@@ -25,14 +19,7 @@ carousel-inner>.item>img {
   
 }
 
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-}
+
 /*--- Fixed Background Image --*/
 
 /*

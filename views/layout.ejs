@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"style="overflow-y: scroll; height: 100%;">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Complete Bootstrap 4 Website Layout</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
     <!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
     <title>My EJS TEST</title>
 </head>         
+<body >
+    
 
  <nav class='navbar navbar-expand-md navbar-light bg-light sticky-top'>
  <div class="container-fluid">
@@ -53,10 +58,12 @@
 <footer id='myFooter'>
 </footer>
 
-
+</body>
 <script>
 document.getElementById("myFooter").innerHTML =
-`<blockquote class="blockquote text-center">
+`
+<br><br>
+<blockquote class="blockquote text-center">
     <p id='copyright'>Copyright &copy; ${  new Date().getFullYear()} Albion Software
       rights reserved.</p>
     </blockquote>`;
