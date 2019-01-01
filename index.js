@@ -5,8 +5,8 @@ const ejsLayouts = require('express-ejs-layouts');
 const app = express();
 const port = process.env.PORT || 3000;
 const navigation_routes = require('./routes/navigation');
-//const mongoose = require('mongoose');
-//const db = require('./config/keys').mongoURI;
+const mongoose = require('mongoose');
+const db = require('./config/keys').mongoURI;
 
 //const db= process.env.MONGODB_URI;
 
@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(navigation_routes);
-/*
+
 mongoose.connect(
 	db,
 	{ useNewUrlParser: true }
@@ -29,7 +29,7 @@ mongoose.connect(
 	})
 	.catch(err => {
 		return console.log(err);
-	});*/
+	});
 
 app.listen(port, () => {
 	// eslint-disable-next-line no-console
