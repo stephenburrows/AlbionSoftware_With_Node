@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(navigation_routes);
-
+/*
 mongoose.connect(
 	db,
 	{ useNewUrlParser: true }
@@ -29,7 +29,7 @@ mongoose.connect(
 	})
 	.catch(err => {
 		return console.log(err);
-	});
+	});*/
 console.log(process.env.MONGODB_URI);
 app.listen(port, () => {
 	// eslint-disable-next-line no-console
