@@ -5,10 +5,10 @@ const ejsLayouts = require('express-ejs-layouts');
 const app = express();
 const port = process.env.port || 3000;
 const navigation_routes = require('./routes/navigation');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 //const db = require('./config/keys').mongoURI;
 
-const db= process.env.MONGODB_URI;
+//const db= process.env.MONGODB_URI;
 
 app.set('view engine', 'ejs');
 
@@ -30,7 +30,7 @@ mongoose.connect(
 	.catch(err => {
 		return console.log(err);
 	});*/
-console.log(process.env.MONGODB_URI);
+
 app.listen(port, () => {
 	// eslint-disable-next-line no-console
 	return console.log(`Example app listening on port ${port}!`);

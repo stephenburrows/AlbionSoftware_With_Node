@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Comment = require('../model/comment');
+//const Comment = require('../model/comment');
 
 // homepage
 router.get('/', (req, res) => {
@@ -50,7 +50,7 @@ router.get('/conect', (req, res) => {
 router.post('/conect',(req,res)=>{
 	const { name, email,comment } = req.body;
 
-	const new_comment = new Comment  ({
+	/*const new_comment = new Comment  ({
 		name,
 		email,
 		comment
@@ -67,7 +67,7 @@ router.post('/conect',(req,res)=>{
 });
 // error
 router.get('/*', (req, res) => {
-	return res.render('error');
+	return res.render('error');*/
 });
 
 module.exports = router;
