@@ -1,12 +1,12 @@
-
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const ejsLayouts = require('express-ejs-layouts');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT ;
 const navigation_routes = require('./routes/navigation');
 const mongoose = require('mongoose');
-//const db = require('./config/keys').mongoURI;
+
 
 const db= process.env.MONGODB_URI;
 
