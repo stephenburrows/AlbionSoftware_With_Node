@@ -4,6 +4,8 @@
   "description": "playing about with express",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Albion Software",
@@ -15,7 +17,8 @@
     "bower-config": "^0.6.2",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "express-ejs-layouts": "^2.5.0"
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.4.1"
   },
   "devDependencies": {
     "eslint": "^5.11.1",

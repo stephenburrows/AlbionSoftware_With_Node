@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Comment = require('../model/comment');
 
 // homepage
 router.get('/', (req, res) => {
@@ -45,7 +46,25 @@ router.get('/conect', (req, res) => {
 	return res.render('conect');
 });
 
+//Handles the posting from the comment section
+router.post('/conect',(req,res)=>{
+	const { name, email,comment } = req.body;
 
+	const new_comment = new Comment  ({
+		name,
+		email,
+		comment
+	
+	});
+
+	new_comment.save()
+		.then(()=>{
+			//need to hjave an action for the saving of the comment.
+		})
+		.catch((error)=>{
+			//need to add action for error.
+		});
+});
 // error
 router.get('/*', (req, res) => {
 	return res.render('error');
