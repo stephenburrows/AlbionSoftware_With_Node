@@ -13,7 +13,19 @@ router.get('/index', (req, res) => {
 
 // about
 
-var abouts=[{
+
+router.get('/about', (req, res) => {
+
+	return res.render('about');
+});
+
+// service
+router.get('/service', (req, res) => {
+	return res.render('service');
+});
+
+// team
+var teamMembers=[{
 	name:'stephen',
 	age:42
 },
@@ -26,19 +38,8 @@ var abouts=[{
 	age:5
 }
 ];
-router.get('/about', (req, res) => {
-
-	return res.render('about',{abouts: abouts});
-});
-
-// service
-router.get('/service', (req, res) => {
-	return res.render('service');
-});
-
-// team
 router.get('/team', (req, res) => {
-	return res.render('team');
+	return res.render('team',{teamMembers: teamMembers});
 });
 
 // conect
