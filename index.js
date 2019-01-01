@@ -6,9 +6,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 const navigation_routes = require('./routes/navigation');
 const mongoose = require('mongoose');
-const db = process.env.MONGODB_URI;//require('./config/keys').mongoURI;
+//const db = require('./config/keys').mongoURI;
 
-//const db= process.env.MONGODB_URI;
+const db= process.env.MONGODB_URI;
 
 app.set('view engine', 'ejs');
 
