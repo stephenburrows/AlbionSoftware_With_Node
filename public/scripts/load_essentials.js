@@ -1,11 +1,12 @@
+//var navigation =   document.getElementById('myNav');
 
+var footer = document.getElementById('myFooter');
+footer.innerHTML = `<blockquote class="blockquote text-center">
+<p>Copyright &copy; ${new Date().getFullYear()} Albion Software rights reserved .</p>
+</blockquote>`;
 
-var navigation =   document.getElementById('myNav');
-var footer =   document.getElementById('myFooter');
-
-
-navigation.setAttribute('class','navbar navbar-expand-md navbar-light bg-light sticky-top');
-
+//navigation.setAttribute('class','navbar navbar-expand-md navbar-light bg-light sticky-top');
+/*
 navigation.innerHTML =
   `<div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
@@ -37,9 +38,4 @@ navigation.innerHTML =
         </div>`;
 
 
-
-footer.innerHTML =   `<blockquote class="blockquote text-center">
-<p>Copyright &copy; ${new Date().getFullYear()} Albion Software rights reserved .</p>
-</blockquote>`;
-
-
+*/
