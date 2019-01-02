@@ -6,6 +6,16 @@
   margin: 0;   
   max-width: 100%; }
 
+  .thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+}
+/*
+.card {
+  height: 350px;
+}*/
+
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
 

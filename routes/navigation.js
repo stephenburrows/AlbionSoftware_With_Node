@@ -13,9 +13,7 @@ router.get('/index', (req, res) => {
 
 // about
 
-
 router.get('/about', (req, res) => {
-
 	return res.render('about');
 });
 
@@ -25,21 +23,22 @@ router.get('/service', (req, res) => {
 });
 
 // team
-var teamMembers=[{
-	name:'stephen',
-	age:42
-},
-{
-	name:'Julie',
-	age:41
-},
-{
-	name:'Elizabeth',
-	age:5
-}
+var teamMembers = [
+	{
+		name: 'stephen',
+		age: 42,
+	},
+	{
+		name: 'Julie',
+		age: 41,
+	},
+	{
+		name: 'Elizabeth',
+		age: 5,
+	},
 ];
 router.get('/team', (req, res) => {
-	return res.render('team',{teamMembers: teamMembers});
+	return res.render('team', { teamMembers: teamMembers });
 });
 
 // conect
@@ -48,22 +47,22 @@ router.get('/conect', (req, res) => {
 });
 
 //Handles the posting from the comment section
-router.post('/conect',(req,res)=>{
-	const { name, email,comment } = req.body;
+router.post('/conect', (req, res) => {
+	const { name, email, comment } = req.body;
 
-	const new_comment = new Comment  ({
+	const new_comment = new Comment({
 		name,
 		email,
-		comment
-	
+		comment,
 	});
 
-	new_comment.save()
-		.then(()=>{
+	new_comment
+		.save()
+		.then(() => {
 			//need to hjave an action for the saving of the comment.
 			res.redirect('/');
 		})
-		.catch((error)=>{
+		.catch(() => {
 			//need to add action for error.
 		});
 });
