@@ -3,32 +3,47 @@
 
 
 .carousel-inner > .carousel-item > img {
-  margin: 0;   
-  max-width: 100%; }
+margin: 0;   
+max-width: 100%; }
 
-  .thumbnail img {
-    max-height: 100%;
-    max-width: 100%;
+.thumbnail img {
+max-height: 100%;
+max-width: 100%;
+}
+a {
+ text-decoration: none;
+ color: white;
 }
 /*
 .card {
-  height: 350px;
+height: 350px;
 }*/
 
+.list-group-item
+{
+  padding: 5px;
+  margin: 5px;
+}
+
+.tab-content {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+}
 
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
-  }
+}
 @media (max-width: 768px) {
-  
+
 }
 @media (max-width: 576px) {
-  
+
 }
 
 [class*="col-"] {
-    padding: 1rem;
+padding: 1rem;
 }
 
 

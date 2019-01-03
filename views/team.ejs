@@ -1,27 +1,42 @@
-
-<h1> team</h1>
+<br>
+<div class="text-center">
+<h1 > Meet The Team</h1>
+</div>
 <br>
 
 <div class="row">
     <div class="col-4">
         <div class="list-group" id="list-tab" role="tablist">
 
-<% teamMembers.forEach(member => { %>
-            <a class="list-group-item list-group-item-action "  id="list-<%- member.name%>-list" data-toggle="list" href="#<%- member.name%>" role="tab" ><%= member.name %></a>
-<% }) %>
+        <% for( let index = 0; index < teamMembers.length; index++ ) { %>
+
+<% if (index==0) { %>
+    <a class="list-group-item list-group-item-action active  tm-3"  id="list-<%-  teamMembers[index].name%>-list" data-toggle="list" href="#<%- teamMembers[index].name%>" role="tab" ><%= teamMembers[index].name %></a>
+<% } else { %>
+    <a class="list-group-item list-group-item-action tm-3"  id="list-<%-  teamMembers[index].name%>-list" data-toggle="list" href="#<%-  teamMembers[index].name%>" role="tab" ><%=  teamMembers[index].name %></a>
+<% } %> 
+
+<% } %>
         </div>
     </div>
     <div class="col-8">
-        <div class="tab-content" id="nav-tabContent">
-        <% teamMembers.forEach(member => { %>
-            <div class="tab-pane fade show" id="<%- member.name%>" role="tabpanel" >  <%= member.age %> </div>
-        <% }) %>
+        <div class="tab-content " id="nav-tabContent ">
+        <% for( let index = 0; index < teamMembers.length; index++ ) { %>
+
+<% if (index==0) { %>
+
+<div class="tab-pane fade show active" id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aliquid voluptatum similique quod exercitationem quas maxime, minima quaerat minus modi voluptatem debitis dolores, soluta saepe. </div>
+
+<% } else { %>
+<div class="tab-pane fade show" id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit.<BR> Ipsam saepe maxime quo. Ducimus, dignissimos vitae. </div>
+<% } %> 
+
+<% } %>
             </div>
         </div>
     </div>
  </div>   
-
-
 <br>
+
 
 
