@@ -2,18 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 
 
-.container{
-  
-  width:50vw;
-
-  background-color:transparent;
-  border: 2px;
-  border-style: solid;
-  display:flex;
-  align-content: stretch;
- 
-  
-}
 
 .carousel-inner > .carousel-item > img {
 margin: 0;   
