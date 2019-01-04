@@ -38,16 +38,17 @@ var teamMembers = [
 	},
 ];
 router.get('/team', (req, res) => {
+	console.log(req.app.locals.mong.version);
 	return res.render('team', { teamMembers: teamMembers });
 });
 
-// conect
-router.get('/conect', (req, res) => {
-	return res.render('conect');
+// connect
+router.get('/connect', (req, res) => {
+	return res.render('connect');
 });
 
 //Handles the posting from the comment section
-router.post('/conect', (req, res) => {
+router.post('/connect', (req, res) => {
 	const { name, email, comment } = req.body;
 
 	const new_comment = new Comment({
