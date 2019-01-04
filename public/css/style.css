@@ -18,10 +18,14 @@ footer{
 }
 
 
+.carousel-inner > .carousel-item > img { 
 
-.carousel-inner > .carousel-item > img {
-margin: 0;   
-max-width: 100%; }
+      /* width:auto;
+      height: 730px;
+      margin: auto; */
+     
+
+        }
 
 .thumbnail img {
 max-height: 100%;
