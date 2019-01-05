@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-4">
-        <div class="list-group" id="list-tab" role="tablist">
+        <div class="list-group  id="list-tab" role="tablist">
 
         <% for( let index = 0; index < teamMembers.length; index++ ) { %>
 
@@ -25,10 +25,10 @@
 
 <% if (index==0) { %>
 
-<div class="tab-pane fade show active" id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aliquid voluptatum similique quod exercitationem quas maxime, minima quaerat minus modi voluptatem debitis dolores, soluta saepe. </div>
+<div class="tab-pane fade show active " id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis aliquid voluptatum similique quod exercitationem quas maxime, minima quaerat minus modi voluptatem debitis dolores, soluta saepe. </div>
 
 <% } else { %>
-<div class="tab-pane fade show" id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit.<BR> Ipsam saepe maxime quo. Ducimus, dignissimos vitae. </div>
+<div class="tab-pane fade show " id="<%- teamMembers[index].name%>" role="tabpanel" >Lorem ipsum dolor, sit amet consectetur adipisicing elit.<BR> Ipsam saepe maxime quo. Ducimus, dignissimos vitae. </div>
 <% } %> 
 
 <% } %>

@@ -11,10 +11,10 @@ router.get('/index', (req, res) => {
 	return res.render('index');
 });
 
-// about
+// technologies
 
-router.get('/about', (req, res) => {
-	return res.render('about');
+router.get('/technologies', (req, res) => {
+	return res.render('technologies');
 });
 
 // service
