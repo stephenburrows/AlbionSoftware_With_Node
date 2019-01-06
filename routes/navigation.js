@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Comment = require('../model/comment');
+const team = require('../model/team');
 
 // homepage
 router.get('/', (req, res) => {
@@ -18,28 +19,45 @@ router.get('/technologies', (req, res) => {
 });
 
 // service
-router.get('/service', (req, res) => {
-	return res.render('service');
+router.get('/testimonials', (req, res) => {
+	Comment.find({})
+		.then((doc) => {
+			var comments = [];
+			console.log(doc.length);
+			for (let index = 0; index < doc.length; index++) {
+				comments.push({
+					name: doc[index].name,
+					comment: doc[index].comment,
+				});
+			}
+			comments.reverse();
+			return res.render('testimonials', { Comments: comments });
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+
+	//return res.render('service');
 });
 
-// team
-var teamMembers = [
-	{
-		name: 'stephen',
-		age: 42,
-	},
-	{
-		name: 'Julie',
-		age: 41,
-	},
-	{
-		name: 'Elizabeth',
-		age: 5,
-	},
-];
 router.get('/team', (req, res) => {
-	console.log(req.app.locals.mong.version);
-	return res.render('team', { teamMembers: teamMembers });
+	team
+		.find({})
+		.then((doc) => {
+			var members = [];
+			for (let index = 0; index < doc.length; index++) {
+				members.push({
+					key: doc[index].name.split(' ').join(''),
+					name: doc[index].name,
+					bio: doc[index].bio,
+				});
+			}
+
+			return res.render('team', { teamMembers: members });
+		})
+		.catch((err) => {
+			console.error(err);
+		});
 });
 
 // connect
@@ -51,17 +69,17 @@ router.get('/connect', (req, res) => {
 router.post('/connect', (req, res) => {
 	const { name, email, comment } = req.body;
 
-	const new_comment = new Comment({
+	const newComment = new Comment({
 		name,
 		email,
 		comment,
 	});
 
-	new_comment
+	newComment
 		.save()
 		.then(() => {
-			//need to hjave an action for the saving of the comment.
-			res.redirect('/');
+			//need to have an action for the saving of the comment.
+			res.redirect('testimonials');
 		})
 		.catch(() => {
 			//need to add action for error.

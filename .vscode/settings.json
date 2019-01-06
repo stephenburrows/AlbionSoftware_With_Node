@@ -1,7 +1,6 @@
 {
-    "movets.openEditors": true,
-    "movets.relativeToTsconfig": true,
-    "movets.skipWarning": true,
-    "mssql.applyLocalization": true,
-    "emmet.includeLanguages": {"ejs":"html"}
+	"movets.openEditors": true,
+	"movets.relativeToTsconfig": true,
+	"movets.skipWarning": true,
+	"mssql.applyLocalization": true
 }
