@@ -3,6 +3,8 @@
 const navigation = document.querySelector('#myNav');
 const footer = document.querySelector('#myFooter');
 
+
+
 //action element
 AddNavigationBar(navigation);
 AddFooter(footer);
