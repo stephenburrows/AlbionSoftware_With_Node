@@ -2,5 +2,6 @@
 	"movets.openEditors": true,
 	"movets.relativeToTsconfig": true,
 	"movets.skipWarning": true,
-	"mssql.applyLocalization": true
+	"mssql.applyLocalization": true,
+	"cSpell.language": "en-GB"
 }
