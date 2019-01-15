@@ -25,15 +25,12 @@ mongoose
 		{ useNewUrlParser: true },
 	)
 	.then(() => {
-		console.log('MongoDB Connected');
+		app.listen(port, () => {
+			// eslint-disable-next-line no-console
+			return console.log(`Example app listening on port ${port}!`);
+		});
+		app.locals.mong = mongoose;
 	})
 	.catch((err) => {
 		return console.log(err);
 	});
-
-console.log(mongoose.version);
-app.locals.mong = mongoose;
-app.listen(port, () => {
-	// eslint-disable-next-line no-console
-	return console.log(`Example app listening on port ${port}!`);
-});
