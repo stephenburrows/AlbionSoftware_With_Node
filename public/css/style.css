@@ -27,9 +27,15 @@ footer{
 max-height: 100%;
 max-width: 100%;
 }
-.card {
-min-height: 26rem;
+.card{
+  min-height: 13rem;
+  border: 2px solid rgba(0,0,0,0.2)
 }
+
+.tech-card {
+min-height: 33.8rem;
+}
+
 /*
 .card {
 height: 350px;
@@ -52,7 +58,7 @@ height: 350px;
 
 /*---Media Queries --*/
 @media only screen 
-and (min-device-width : 320px) 
+
 and (max-device-width : 415px) {
 /* Styles */
 .display-3 {
@@ -118,34 +124,3 @@ only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
 /* Styles */
 }
-
-
-
-
-
-
-/*
-
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-*/
-
-
-
-
-
-
-
