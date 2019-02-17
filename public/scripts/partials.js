@@ -9,8 +9,13 @@ const footer = document.querySelector('#myFooter');
 AddNavigationBar(navigation);
 AddFooter(footer);
 
-// Functions to populate the dom with predefined looks
-// eg.. Footer  header ect..
+
+/**
+ * @description Functions to populate the dom with predefined NavBar
+ * @author Burrows
+ * @date 2019-02-17
+ * @param {Element} htmlElement
+ */
 function AddNavigationBar(htmlElement) {
 	if (htmlElement != null) {
 		try {
@@ -41,10 +46,10 @@ function AddNavigationBar(htmlElement) {
                       <a class="nav-link" href="#">Team</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">conect</a>
+                      <a class="nav-link" href="#">connect</a>
                   </li>
               </ul>
-       
+
             </div>
             </div>`;
 		} catch (error) {
@@ -52,6 +57,13 @@ function AddNavigationBar(htmlElement) {
 		}
 	}
 }
+
+/**
+ * @description Functions to populate the dom with predefined Footer
+ * @author Burrows
+ * @date 2019-02-17
+ * @param {Element} htmlElement
+ */
 function AddFooter(htmlElement) {
 	if (htmlElement != null) {
 		try {
